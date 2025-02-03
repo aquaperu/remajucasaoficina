@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from decouple import config
 
-# Create your views here.
+def hola(request):
+    return HttpResponse(config('AUTENTICA_GOOGLE'))
+
